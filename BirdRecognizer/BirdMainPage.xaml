@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:BirdRecognizer" x:Class="BirdRecognizer.BirdMainPage">
+    <NavigationPage Title="Bird Locations">
+        <x:Arguments>
+            <local:AzureTable />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Photo Analysis">
+        <x:Arguments>
+            <local:PhotoAnalysis />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>
+    

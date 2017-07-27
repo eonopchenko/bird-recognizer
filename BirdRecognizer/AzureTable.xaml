@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BirdRecognizer.AzureTable" Title="Bird Locations">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Request" TextColor="White" BackgroundColor="Red" Clicked="Get_ClickedAsync" />
+            <ListView x:Name="BirdList" HasUnevenRows="true">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70*" />
+                                    <ColumnDefinition Width="30*" />
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0" Orientation="Vertical" Margin="0,0,10,0">
+                                    <Label Text="{Binding City}" HorizontalTextAlignment="End"/>
+                                    <Label Text="{Binding Bird}" HorizontalTextAlignment="End"/>
+                                </StackLayout>
+                                <StackLayout Grid.Column="1" Orientation="Vertical" Margin="0,0,10,0">
+                                    <Label Text="{Binding Longitude, StringFormat='Longitude: {0:N}'}" HorizontalTextAlignment="End"/>
+                                    <Label Text="{Binding Latitude, StringFormat='Latitude: {0:N}'}" HorizontalTextAlignment="End"/>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
