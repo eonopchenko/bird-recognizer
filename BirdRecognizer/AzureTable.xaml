@@ -4,7 +4,7 @@
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
     </ContentPage.Padding>
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="#0075c1">
             <Button Text="Request" TextColor="White" BackgroundColor="Red" Clicked="Get_ClickedAsync" />
             <ListView x:Name="BirdList" HasUnevenRows="true">
                 <ListView.ItemTemplate>
@@ -19,12 +19,12 @@
                                     <ColumnDefinition Width="30*" />
                                 </Grid.ColumnDefinitions>
                                 <StackLayout Grid.Column="0" Orientation="Vertical" Margin="0,0,10,0">
-                                    <Label Text="{Binding City}" HorizontalTextAlignment="End"/>
-                                    <Label Text="{Binding Bird}" HorizontalTextAlignment="End"/>
+                                    <Label TextColor="White" Text="{Binding City}" HorizontalTextAlignment="End"/>
+                                    <Label TextColor="White" Text="{Binding Bird}" HorizontalTextAlignment="End"/>
                                 </StackLayout>
                                 <StackLayout Grid.Column="1" Orientation="Vertical" Margin="0,0,10,0">
-                                    <Label Text="{Binding Longitude, StringFormat='Longitude: {0:N}'}" HorizontalTextAlignment="End"/>
-                                    <Label Text="{Binding Latitude, StringFormat='Latitude: {0:N}'}" HorizontalTextAlignment="End"/>
+                                    <Label TextColor="White" Text="{Binding Longitude, StringFormat='Longitude: {0:N}'}" HorizontalTextAlignment="End"/>
+                                    <Label TextColor="White" Text="{Binding Latitude, StringFormat='Latitude: {0:N}'}" HorizontalTextAlignment="End"/>
                                 </StackLayout>
                             </Grid>
                         </ViewCell>
@@ -34,3 +34,4 @@
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+    

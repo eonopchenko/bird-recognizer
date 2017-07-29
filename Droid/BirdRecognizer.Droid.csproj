@@ -188,6 +188,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="PluginsHelp\GeolocatorReadme.txt" />
+    <AndroidResource Include="Resources\drawable\location_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\location_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\location_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\location_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
